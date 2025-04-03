@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Black Seadevil Anglerfish</title>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="styles/detailStyles.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="#title"><img class="nav-logo" src="../images/national-geographic-logo.png" alt="national geographic logo"></a>
+            <a href="#about" class="nav-link" href="">About</a>
+            <a href="#images" class="nav-link" href="">Images</a>
+            <a href="#videos" class="nav-link" href="">Videos</a>
+            <a href="#events" class="nav-link" href="">Events</a>
+        </div>
+        <div class="flex flex-justify-center">
+            <div class="main-container">
+                <h1 id="title" class="title-heading">Black Seadevil Anglerfish</h1>
+                <p class="scientific-name">Melanocetus Johnsonii</p>
+                <img class="title-image" src="../images/TitleFish.avif" alt="placeholder image">
+                <h2 id="about" class="about-label">About</h2>
+                <p class="about-paragraph">Black Seadevils are very small fish, much smaller than online pictures would have you believe. They live in tropical waters in the ocean. They have a lot of teeth, very few scales, and a dorsal spine. They also have a bioluminescent 'lure' dangling off of their face.</p>
+                <p class="about-paragraph">The bioluminescence is produced by a bacteria absorbed directly from the seawater. Adult male Seadevils don't have lures and also don't eat. The females use their lures to catch crustaceans and small fish. The females are generally much bigger than males and have distended stomachs.</p>
+                <p class="about-paragraph">Click <a class="link" href="https://en.wikipedia.org/wiki/Black_seadevil">here</a> to learn more about the Black Seadevil Anglerfish at Wikipedia.</p>
+                <h2 id="images">Images</h2>
+                <img class="slideshow-image" src="" alt="Amglerfish" id="current-slide" ondblclick="changeSlide(1)">
+                <div class="slideshow-button-container">
+                    <button class="slideshow-button" onClick="changeSlide(-1)"><</button>
+                    <p id = slide-counter>0/0</p>
+                    <button class="slideshow-button" onClick="changeSlide(1)">></button>
+                </div>
+                <h2 id="videos">Videos</h2>
+                <div class="video-container">
+                    <iframe class="video" src="https://www.youtube.com/embed/I4QtYfK6F-0" frameborder="0"></iframe>
+                </div>
+                <div class="event-container">
+                    <h2 id="events" class="no-margin">Events</h2>
+                    <p class="today-date">Today's Date:</p>
+                    <p id="date-display"></p>
+                    <div id="past-events"></div>
+                    <div id="upcoming-events"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="links-container">
+                <h4>Legal</h4>
+                <a href="https://disneytermsofuse.com/english/">Terms of Use</a>
+                <a href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/">Privacy Policy</a>
+            </div>
+            <div class="links-container">
+                <h4>Join Us</h4>
+                <a href="https://www.nationalgeographic.com/subscribe/magazines?cmpid=int_org=ngp::int_mc=website::int_src=ngp::int_cmp=subs_ngm::int_add=navsubscribe_us">Subscribe</a>
+                <a href="https://help.nationalgeographic.com/">Customer Service</a>
+                <a href="https://www.nationalgeographic.com/pages/topic/careers">Work at Nat Geo</a>
+            </div>
+            <div class="links-container">
+                <h4>Follow Us</h4>
+                <a href="https://www.instagram.com/natgeo/">Instagram</a>
+                <a href="https://www.facebook.com/natgeo">Facebook</a>
+                <a href="https://www.youtube.com/@NatGeo">Youtube</a>
+            </div>
+        </div>
+        <script src="js/detailScript.js"></script>
+    </body>
+</html>
+

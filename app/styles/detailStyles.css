@@ -1,0 +1,230 @@
+
+html {
+    scroll-padding-top: 90px; /* Adjust based on navbar height */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    font-family: Helvetica;
+    margin: 0;
+    min-width: 612px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.navbar {
+    border-bottom: 2px solid black;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    position: sticky;
+    gap: 5px;
+}
+
+.nav-logo {
+    width: 150px;
+    margin-right: 5px;
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    transition: color .2s linear, background-color .2s linear;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background-color: black;
+    color: white;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.title-heading {
+    margin-bottom: 10px;
+}
+
+.scientific-name {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.title-image {
+    border-radius: 10px;
+    width: 100%;
+    height: 400px;
+    background-color: #EFF1F3;
+}
+
+.about-label {
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.about-paragraph {
+    line-height: 20px;
+}
+
+.slideshow-image {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.slideshow-button-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.slideshow-button-container>* {
+    display: inline-block;
+}
+
+.slideshow-button {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    box-shadow: none;
+    cursor: pointer;
+    transition: color .2s linear, background-color .2s linear;
+}
+
+.slideshow-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.video-container {
+    margin-bottom: 40px;
+    width: 100%;
+    max-height: 800px;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 9/16;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.event-container {
+    width: 100%;
+    border: 1px solid black;
+    padding: 16px;
+}
+
+.event-container p {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.events-flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 20px;
+}
+
+.event-card {
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.event-card a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
+.event-card a>* {
+    margin: 0;
+}
+
+.event-card a:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.today-date {
+    margin: 0;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.footer {
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 45px;
+    background-color: black;
+    color: white;
+    gap: 200px;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.links-container > h4 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.links-container > a {
+    color: white;
+    text-decoration: none;
+}
+
+.links-container > a:hover {
+    text-decoration: underline;
+}
+
