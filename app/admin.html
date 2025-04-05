@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Login</title>
+        <title>Admin Portal</title>
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
         <link rel="stylesheet" href="styles/adminStyles.css">
     </head>
@@ -8,16 +8,10 @@
         <div class="navbar">
             <a href="#title"><img class="nav-logo" src="../images/national-geographic-logo.png" alt="national geographic logo"></a>
         </div>
-        <h2>Login</h2>
-        <div id="login-container" class="login-container">
-            <form onsubmit="submitForm(event)">
-                <label for="username">Username:</label>
-                <input type="text" id="username">
-                <label for="password">Password:</label>
-                <input type="password" id="password">
-                <button type="submit">Submit</button>
-            </form>
-            <p id="invalid-input-message" class="error-message"></p>
+        <h2>Admin Portal</h2>
+        <div id="user-info-container" class="user-info-container">
+            <p>Animals you have added:</p>
+            <ul id="animal-list"></ul>
         </div>
         <div class="footer">
             <div class="links-container">
@@ -38,7 +32,7 @@
                 <a href="https://www.youtube.com/@NatGeo">Youtube</a>
             </div>
         </div>
-        <script src="js/loginScript.js"></script>
+        <script src="js/adminScript.js"></script>
     </body>
 </html>
 

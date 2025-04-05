@@ -60,13 +60,49 @@ h2 {
     padding: 8px;
 }
 
-.login-container input[type="submit"] {
+.login-container button {
     margin-top: 8px;
     width: 10vw;
     min-width: 60px;
     max-width: 120px;
     cursor: pointer;
     align-self: center;
+}
+
+.error-message {
+    color: red;
+}
+
+.user-info-container {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    width: 360px;
+    justify-self: center;
+    box-sizing: border-box;
+    gap: 8px;
+    border: 2px solid black;
+    min-height: 400px;
+}
+
+.user-info-container >* {
+    margin: 0px;
+}
+
+.bottom-row {
+    display: flex;
+    margin-top: auto;
+    font-size: 20px;
+}
+
+.bottom-row button {
+    width: 72px;
+    height: 24px;
+    margin: 0px 16px;
+}
+
+.greeting {
+    padding: 12px 0px;
 }
 
 .footer {
