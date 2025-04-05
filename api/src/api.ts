@@ -3,13 +3,22 @@ import fs from 'fs'
 import {Animal, User, Event, DecodedToken} from "./typeInterfaces"
 import sha256 from 'js-sha256';
 import jwt from 'jsonwebtoken';
+import 'dotenv/config';
+import cors from 'cors';
 
 declare module 'js-sha256' {
     export default function sha256(input: string): string;
 }
 
+// Include access-control-allow-origin headers
+const corsOptions = {
+    origin: "http://127.0.0.1:5500"
+}
+
 const app = express();
 const port = 3000;
+app.use(cors(corsOptions));
+app.use(express.json());
 
 const jsonDB = fs.readFileSync('./api/data.json', { encoding: 'utf8'});
 const parsedDB: {animals: Animal[]; users: User[]} = JSON.parse(jsonDB);
@@ -20,7 +29,8 @@ const users: User[] = parsedDB.users;
 // Get all animals
 app.get('/animals', (req: Request, res: Response, next: NextFunction) => {
     try {
-        res.status(200).json(animals);
+        const animalOutput = JSON.stringify(animals, null, 4);
+        res.status(200).send(animalOutput);
     } catch (error) {
         next(error);
     }
@@ -56,18 +66,23 @@ app.get('/animals/:id', (req: Request, res: Response, next: NextFunction) => {
 // POST: /login
 // Login returns authentication token valid for 1 hour
 app.post('/login', (req: Request, res: Response, next: NextFunction) => {
-    try {
-        const { username, password } = req.body;
+    interface LoginBody {
+        username: String;
+        password: string;
+    };
 
+    try {
         // Validate request
-        if (!username) {
+        if (!req.body.username) {
             res.status(400).json({ error: 'Error: Malformed/Invalid Request Body -- Missing username' })
             return;
         }
-        if (!password) {
+        if (!req.body.password) {
             res.status(400).json({ error: 'Error: Malformed/Invalid Request Body -- Missing password' })
             return;
         }
+
+        const { username, password } = req.body as LoginBody;
 
         // Create auth token
         const userhash = sha256(`${username}:${password}`);
@@ -95,7 +110,7 @@ app.post('/login', (req: Request, res: Response, next: NextFunction) => {
 app.post('/animals', (req: Request, res: Response, next: NextFunction) => {
     try {
         // Validate header
-        const token = req.params.id as string;
+        const token = req.headers.token as string;
         if (!token) {
             res.status(401).json({ error: 'Error: Unauthorized' });
             return;
@@ -182,7 +197,7 @@ app.post('/animals', (req: Request, res: Response, next: NextFunction) => {
         animals.push(animal);
 
         // Write back to json file
-        const newJSON = JSON.stringify({ animals, users });
+        const newJSON = JSON.stringify({ animals, users }, null, 4);
         fs.writeFileSync('./api/data.json', newJSON);
 
         res.status(201).json({
@@ -200,7 +215,7 @@ app.post('/animals', (req: Request, res: Response, next: NextFunction) => {
 app.get('/user', (req: Request, res: Response, next: NextFunction) => {
     try {
         // Validate header
-        const token = req.params.id as string;
+        const token = req.headers.token as string;
         if (!token) {
             res.status(401).json({ error: 'Error: Unauthorized' });
             return;
@@ -216,22 +231,28 @@ app.get('/user', (req: Request, res: Response, next: NextFunction) => {
         // Find specific user by token id
         const userDetails = users.find(user => user.id === decodedToken.userId);
 
-        //TODO: response body
+        if (userDetails) {
+            const userAnimals = animals.filter(animal => animal.createdByUser === userDetails.id);
+            res.status(200).json({
+                "id": userDetails.id,
+                "name": userDetails.name,
+                "animals": userAnimals
+            });
+        }
+        else {
+            res.status(401).json({ error: 'Error: Unauthorized' });
+            return;
+        }
 
     } catch (error) {
         next(error);
     }
 });
 
-// Catch all
-app.all('*', (req: Request, res: Response, next: NextFunction) => { 
-    next('resource does not exist!');
-});
-
 // Global error handling
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
     console.error(err);
-    res.status(err.status || 500).json({ error: err.message });
+    res.status(500).json({ error: err.message });
 });
 
 app.listen(port, () => {

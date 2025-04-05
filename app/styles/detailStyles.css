@@ -81,6 +81,8 @@ h2 {
     width: 100%;
     height: 400px;
     background-color: #EFF1F3;
+    object-fit: contain;
+    background-color: black;
 }
 
 .about-label {
@@ -94,10 +96,11 @@ h2 {
 
 .slideshow-image {
     width: 100%;
-    height: 600px;
+    min-height: 400px;
     object-fit: contain;
     border-radius: 10px;
     cursor: pointer;
+    background-color: black;
 }
 
 .slideshow-button-container {
@@ -138,8 +141,7 @@ h2 {
 
 .video {
     width: 100%;
-    height: 100%;
-    aspect-ratio: 9/16;
+    aspect-ratio: 16/9;
     border-radius: 5px;
     border-style: solid;
 }
@@ -148,6 +150,7 @@ h2 {
     width: 100%;
     border: 1px solid black;
     padding: 16px;
+    box-sizing: border-box;
 }
 
 .event-container p {

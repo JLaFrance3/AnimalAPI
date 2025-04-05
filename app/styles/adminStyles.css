@@ -11,8 +11,10 @@ body {
     min-width: 612px;
 }
 
-h1 {
+h2 {
     font-size: 40px;
+    justify-self: center;
+    margin-bottom: 12px;
 }
 
 .no-margin {
@@ -41,57 +43,30 @@ h1 {
     margin-right: 5px;
 }
 
-.main-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 0px 8px;
-    user-select: none;
-}
-
-.title-heading {
-    margin-bottom: 10px;
-}
-
-.grid {
-    display: grid;
-    gap: 32px;
-    row-gap: 24px;
-    grid-template-columns: repeat(auto-fill, 560px);
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    width: 560px;
-    height: 372px;
-    border-radius: 4px;
-    box-shadow: 4px 6px 6px 4px lightgrey;
+.login-container {
+    width: 40vw;
+    min-width: 240px;
+    max-width: 480px;
+    justify-self: center;
     box-sizing: border-box;
-    padding: 4px;
-    transition: transform 0.2s ease;
 }
 
-.card >* {
-    text-decoration: none;
-    color: black;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    cursor: pointer;
-}
-
-.card-image-wrapper {
-    height: 304px;
+.login-container form {
     display: flex;
-    background-color: black;
-    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    border: 2px solid black;
     border-radius: 4px;
+    padding: 8px;
 }
 
-.card-image-wrapper img {
-    object-fit: contain;
+.login-container input[type="submit"] {
+    margin-top: 8px;
+    width: 10vw;
+    min-width: 60px;
+    max-width: 120px;
+    cursor: pointer;
+    align-self: center;
 }
 
 .footer {
