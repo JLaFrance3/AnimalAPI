@@ -44,10 +44,14 @@ async function submitForm(event) {
     errorMessage.innerHTML = '';
     const serverResponse = await createAnimal(...fields);
 
-    const status = serverResponse.status;
-    const userDetails = await serverResponse.json();
-    console.log(status);
-    console.log(userDetails)
+    if (serverResponse.status === 201) {
+        window.location.href = 'admin.html';
+    }
+    else {
+        console.log(serverResponse);
+        const responseData = await serverResponse.json();
+        errorMessage.innerHTML = responseData.error;
+    }
 }
 
 function loadSample() {
@@ -56,7 +60,7 @@ function loadSample() {
     descriptionInput.value = 'All species are native to the Americas, where they inhabit a variety of environments.\n' +
         'Living armadillos are characterized by a leathery armor shell and long, sharp claws for digging.';
     imageInput.value = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Nine-banded_Armadillo.jpg/220px-Nine-banded_Armadillo.jpg\n' +
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Nine-banded_Armadillo.jpg/220px-Nine-banded_Armadillo.jpg';
+        'https://missouripoisoncenter.org/wp-content/uploads/2019/08/bigstock-Armadillo-Walking-In-Florida-C-65261536-scaled-1.jpg';
     videoInput.value = 'https://www.youtube.com/embed/FQH2rISdaWw';
     eventsInput.value = 'Shady Armadillo\n' +
         '04/25/2025\n' +
@@ -109,4 +113,8 @@ async function createAnimal(name, sciname, descriptions, images, video, events) 
     if (response) {
         return response;
     }
+}
+
+if(!localStorage.getItem('AuthToken')) {
+    logout();
 }

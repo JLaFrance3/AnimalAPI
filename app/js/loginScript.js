@@ -1,8 +1,6 @@
 
 async function submitForm(event) {
     event.preventDefault();
-    
-    // TODO: Redirect to admin portal if user has valid token
 
     const usernameInput = document.getElementById('username');
     const passwordInput = document.getElementById('password');
@@ -49,4 +47,8 @@ async function login(username, password) {
         localStorage.setItem('AuthToken', JSON.stringify(token));
         window.location.href = 'admin.html';
     }
+}
+
+if(localStorage.getItem('AuthToken')) {
+    window.location.href = 'admin.html';
 }

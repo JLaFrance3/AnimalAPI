@@ -1,7 +1,5 @@
 
 async function loadElements(event) {
-    // TODO: Redirect to login if user has expired token
-
     const userInfoContainer = document.getElementById('user-info-container');
     const animalList = document.getElementById('animal-list');
     const userDetails = await getAccountDetails();
@@ -26,6 +24,9 @@ async function loadElements(event) {
         console.log(animalList.innerHTML);
         console.log("Animals:", userDetails.animals);
     }
+    else {
+        logout();
+    }
 }
 
 function logout() {
@@ -35,6 +36,10 @@ function logout() {
 
 // Login and retrieve auth token
 async function getAccountDetails() {
+    if(!localStorage.getItem('AuthToken')) {
+        logout();
+    }
+
     const SERVER_DOMAIN = 'http://localhost:3000';
 
     const requestOptions = {
