@@ -105,6 +105,40 @@ h2 {
     padding: 12px 0px;
 }
 
+.create-animal-container {
+    padding: 16px;
+    width: 80vw;
+    min-width: 560px;
+    justify-self: center;
+    box-sizing: border-box;
+    gap: 8px;
+    min-height: 400px;
+}
+
+.create-animal-container form {
+    display: grid;
+    padding: 16px;
+    border: 2px solid black;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.create-animal-container form {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    margin: 0px;
+}
+
+.create-animal-container input {
+    height: 24px;
+}
+
+.create-animal-container button {
+    width: fit-content;
+    height: 24px;
+    margin: 16px 0px 0px 0px;
+}
+
 .footer {
     border-top: 1px solid black;
     display: flex;

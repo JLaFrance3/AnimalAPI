@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Login</title>
+        <title>Create Animal</title>
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
         <link rel="stylesheet" href="styles/adminStyles.css">
     </head>
@@ -8,14 +8,23 @@
         <div class="navbar">
             <a href="index.html"><img class="nav-logo" src="../images/national-geographic-logo.png" alt="national geographic logo"></a>
         </div>
-        <h2>Login</h2>
-        <div id="login-container" class="login-container">
+        <h2>Create Animal</h2>
+        <div id="create-animal-container" class="create-animal-container">
             <form onsubmit="submitForm(event)">
-                <label for="username">Username:</label>
-                <input type="text" id="username">
-                <label for="password">Password:</label>
-                <input type="password" id="password">
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+                <label for="sciname">Scientific Name:</label>
+                <input type="text" id="sciname">
+                <label for="description">Description:</label>
+                <textarea id="description" rows="10" cols="40"></textarea>
+                <label for="images">Images:</label>
+                <textarea id="images" rows="10" cols="40"></textarea>
+                <label for="video">Video:</label>
+                <input type="text" id="video">
+                <label for="events">Events:</label>
+                <textarea id="events" rows="20" cols="40"></textarea>
                 <button type="submit">Submit</button>
+                <button type="button" onclick="loadSample()">Load Sample Data</button>
             </form>
             <p id="invalid-input-message" class="error-message"></p>
         </div>
@@ -38,7 +47,7 @@
                 <a href="https://www.youtube.com/@NatGeo">Youtube</a>
             </div>
         </div>
-        <script src="js/loginScript.js"></script>
+        <script src="js/createScript.js"></script>
     </body>
 </html>
 

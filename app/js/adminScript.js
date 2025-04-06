@@ -19,13 +19,18 @@ async function loadElements(event) {
             `
                 <div class="bottom-row">
                     <a href="create.html">Create Animal</a>
-                    <button type="button">Logout</button>
+                    <button onclick="logout()">Logout</button>
                 </div>
             `;
 
         console.log(animalList.innerHTML);
         console.log("Animals:", userDetails.animals);
     }
+}
+
+function logout() {
+    localStorage.removeItem('AuthToken');
+    window.location.href = 'login.html';
 }
 
 // Login and retrieve auth token
