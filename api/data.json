@@ -33,7 +33,115 @@
                     "url": "https://mommypoppins.com/connecticut-kids/event/events/childrens-fishing-derby-at-driscoll-pond"
                 }
             ]
-        }
+        },
+        {
+            "id": 1,
+            "createdByUser": 0,
+            "name": "Threadwing Antlion",
+            "sciName": "Dielocroce hebraea",
+            "description": [
+                "Belonging to the family Nemopteridae, the threadwing antlion is a type of insect with long and thin hindwings. The threadwings (subfamily Crocinae) are strictly nocturnal and share their family with the spoonwings (subfamily Nemopterinae) who are instead active during the day. Members of subfamily Crocinae appear in a very limited selection of habitats, preferring arid deserts and caves with thick layers of dust or fine clay. The larvae of these insects are ground dwelling creatures, leveraging the clay dust as a disguise.",
+                "In their larval stages, they have an extremely long neck and thick body, making them appear like a violin with long legs attached. These larvae are dangerous predators, leveraging their long necks and sickle-shaped mouths to inject venom into unsuspecting prey that they catch off guard. These creatures lie in wait in sand and clay, with only their necks protruding from the dust, springing up when a victim falls into their trap. The long necks also keeps prey away from the vulnerable body of the insect.",
+                "Click <a class=\"link\" href=\"https://gilwizen.com/threadwing-antlions/\">here</a> to learn more about threadwing antlions on Gil Wizen's entomology and photography blog, documenting the creatures. All images on this page are taken from this blog, and are exclusively owned by Gil Wizen."
+            ],
+            "images": [
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvnA00LDncAdJp-MHOfODpM0hrzrHpS0q1Tw&s",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSALmbUm3u-3Zs7QWmmt4ZnG8yuCjZ9UINZnw&s",
+                "https://inaturalist-open-data.s3.amazonaws.com/photos/105078729/large.jpg"
+            ],
+            "video" : "https://www.youtube.com/embed/EG8FedT7Ras",
+            "events": [
+                {
+                    "name": "Photography Showcase",
+                    "date": "01/30/2025",
+                    "url": "https://gilwizen.com/invertebrates/insects/neuroptera/"
+                },
+                {
+                    "name": "Talk on Feeding Behaviours",
+                    "date": "02/15/2025",
+                    "url": "https://www.eje.cz/artkey/eje-200802-0013_flower_visiting_neuroptera_mouthparts_and_feeding_behaviour_of_nemoptera_sinuata_nemopteridae.php"
+                },
+                {
+                    "name": "Talk on Larval Stages",
+                    "date": "04/01/2025",
+                    "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/mmnd.19960430111"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "createdByUser": 0,
+            "name": "Pink dolphin",
+            "sciName": "Inia geoffrensis",
+            "description": [
+                "The pink dolphin, also known as the Amazon river dolphin, is a species of dolphin found in South America. As a river dolphin, it thrives in freshwater habitats, and has a varied diet of Amazon catfish, scaled fish, piranhas, and bottom-dwelling crustaceans. There are three known subspecies of pink dolphin, specifically the Amazon river dolphin, the Bolivian river dolphin, and the Orinoco river dolphin. These subspecies can be found in the Amazon basin in Brazil, the Madeira River in Bolivia, and the Orinoco basin in Colombia respectively. The pink dolphin is currently endangered due to the impact of pollution, fishing, and hunting.",
+                "Despite their name, pink dolphins are born gray and acquire their pink color as they get older. Male pink dolphins also tend to have a more pronounced pink color than female pink dolphins. Pink dolphins are curious and tend to approach boats and other foreign objects. They typically travel alone or in pairs, but have also been recorded to move in pods of up to 37 dolphins. They rely heavily on echolocation for maneuvering and hunting as a result of the murky river waters.",
+                "Click <a class=\"link\" href=\"https://www.junglexperiences.com/blog/pink-dolphin/\" target=\"_blank\" rel=\"noopener noreferrer\">here</a> to learn more about pink dolphins at this article by Jungle Experiences, a cruise line that has pink dolphins as an integral part of their cruises."
+            ],
+            "images": [
+                "https://www.junglexperiences.com/wp-content/uploads/2024/05/El-encanto-de-los-delfines-rosados.png",
+                "https://www.junglexperiences.com/wp-content/uploads/2024/05/Conociendo-al-delfin-rosado.png",
+                "https://www.junglexperiences.com/wp-content/uploads/2024/05/Comportamiento-e-interacciones.png",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Inia_geoffrensis_179341177.jpg/1280px-Inia_geoffrensis_179341177.jpg"
+            ],
+            "video": "https://www.youtube.com/embed/9vgey6Md0Cw",
+            "events": [
+                {
+                    "name": "Snorkeling with Pink Dolphins",
+                    "date": "08/18/2024",
+                    "url": "https://web.archive.org/web/20240205072545/https://www.bigfishexpeditions.com/trips/snorkeling/amazon-pink-dolphins/"
+                },
+                {
+                    "name": "Meeting of the Waters & Pink Dolphin Tour",
+                    "date": "02/27/2024",
+                    "url": "https://www.tripadvisor.com/AttractionProductReview-g303235-d15342300-Meeting_of_the_Waters_Pink_Dolphin_Tour_with_Lunch-Manaus_Amazon_River_State_of_Am.html"
+                },
+                {
+                    "name": "Snorkeling with Pink Dolphins",
+                    "date": "06/10/2025",
+                    "url": "https://www.bigfishexpeditions.com/trips/snorkeling/amazon-pink-dolphins/"
+                },
+                {
+                    "name": "30-Day Amazon Explorer Cruise with Pink Dolphin Encounter",
+                    "date": "11/21/2025",
+                    "url": "https://www.hollandamerica.com/en/us/find-a-cruise/s5x30a/v558"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "createdByUser": 0,
+            "name": "Daring Owl Butterfly",
+            "sciName": "Dynastor Darius",
+            "description": [
+                "The daring-owl butterfly, also known as Dynastor darius, is a butterfly species in the Nymphalidae family.",
+                "It is a large butterfly with a wingspan of around 65-200 millimeters (2.6-7.9 inches). The species is native to Central and South America, mainly found between Guatemala and Brazil.",
+                "There are seven subspecies of the butterfly that are known to be found."
+            ],
+            "images": [
+                "https://inaturalist-open-data.s3.amazonaws.com/photos/2650414/large.jpg",
+                "https://www.mediastorehouse.com/p/729/owl-butterfly-caligo-memnon-caterpillar-heads-26801063.jpg.webp",
+                "https://www.butterfliesofamerica.com/images/Nymphalidae/Subfamily_Mrophinae/Tribe_Brassolini/Dynastor_darius_stygianus/Dynastor_darius_stygianus_M_MX_OAX_Chimalapa_July_1956-MGCL-0230.JPG"
+            ],
+            "video": "https://www.youtube.com/embed/8m1pXrm2qNo",
+            "events": [
+              {
+                "name": "Butterfly Exhibit",
+                "date": "7/16/2021",
+                "url": "https://www.floridamuseum.ufl.edu/exhibits/blog/butterfly-moment-owl-butterfly/"
+              },
+              {
+                "name": "Butterfly Conservation Efforts",
+                "date": "12/13/2024",
+                "url": "https://www.kpbs.org/news/environment/2024/12/13/camp-pendleton-joins-monarch-butterfly-conservation-effort"
+              },
+              {
+                "name": "Visit the butterfly!",
+                "date": "12/1/2025",
+                "url": "https://www.nathab.com/central-america/monarch-butterfly-tour/"
+              }
+            ]
+          }
     ],
     "users": [
         {
