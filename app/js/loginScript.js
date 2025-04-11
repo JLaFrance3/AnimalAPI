@@ -18,7 +18,16 @@ async function submitForm(event) {
     else {
         errorMessage.innerHTML = '';
         
-        login(usernameInput.value, passwordInput.value);
+        const loginResponse = await login(usernameInput.value, passwordInput.value);
+        console.log(loginResponse);
+        console.log(loginResponse.status);
+        if (loginResponse.status === 401) {
+            errorMessage.innerHTML = 'Error: Unauthorized';
+        }
+        else {
+            const errorData = await response.json();
+            errorMessage.innerHTML = `Error: ${errorData.error}`;
+        }
     }
 }
 
@@ -47,6 +56,8 @@ async function login(username, password) {
         localStorage.setItem('AuthToken', JSON.stringify(token));
         window.location.href = 'admin.html';
     }
+
+    return response;
 }
 
 if(localStorage.getItem('AuthToken')) {

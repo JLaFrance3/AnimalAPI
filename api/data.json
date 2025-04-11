@@ -49,7 +49,7 @@
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSALmbUm3u-3Zs7QWmmt4ZnG8yuCjZ9UINZnw&s",
                 "https://inaturalist-open-data.s3.amazonaws.com/photos/105078729/large.jpg"
             ],
-            "video" : "https://www.youtube.com/embed/EG8FedT7Ras",
+            "video": "https://www.youtube.com/embed/EG8FedT7Ras",
             "events": [
                 {
                     "name": "Photography Showcase",
@@ -125,23 +125,23 @@
             ],
             "video": "https://www.youtube.com/embed/8m1pXrm2qNo",
             "events": [
-              {
-                "name": "Butterfly Exhibit",
-                "date": "7/16/2021",
-                "url": "https://www.floridamuseum.ufl.edu/exhibits/blog/butterfly-moment-owl-butterfly/"
-              },
-              {
-                "name": "Butterfly Conservation Efforts",
-                "date": "12/13/2024",
-                "url": "https://www.kpbs.org/news/environment/2024/12/13/camp-pendleton-joins-monarch-butterfly-conservation-effort"
-              },
-              {
-                "name": "Visit the butterfly!",
-                "date": "12/1/2025",
-                "url": "https://www.nathab.com/central-america/monarch-butterfly-tour/"
-              }
+                {
+                    "name": "Butterfly Exhibit",
+                    "date": "7/16/2021",
+                    "url": "https://www.floridamuseum.ufl.edu/exhibits/blog/butterfly-moment-owl-butterfly/"
+                },
+                {
+                    "name": "Butterfly Conservation Efforts",
+                    "date": "12/13/2024",
+                    "url": "https://www.kpbs.org/news/environment/2024/12/13/camp-pendleton-joins-monarch-butterfly-conservation-effort"
+                },
+                {
+                    "name": "Visit the butterfly!",
+                    "date": "12/1/2025",
+                    "url": "https://www.nathab.com/central-america/monarch-butterfly-tour/"
+                }
             ]
-          }
+        }
     ],
     "users": [
         {

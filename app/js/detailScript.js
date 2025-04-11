@@ -39,7 +39,7 @@ async function loadElements() {
     const animal = await getAnimal(id);
     
     if (animal) {
-        images = animal.images;
+        images = animal.images.slice(1);;
 
         // Set browser tab title
         document.title = animal.name;
@@ -54,7 +54,7 @@ async function loadElements() {
 
         // Use first image as title image
         const titleImage = document.getElementById("title-image");
-        titleImage.src = images[0];
+        titleImage.src = animal.images[0];
 
         // Write descriptions in paragraph form
         const aboutDescriptions = document.getElementById("descriptions");
@@ -64,7 +64,7 @@ async function loadElements() {
             `;
         });
 
-        changeSlide(1); //Set initial slide
+        changeSlide(0); //Set initial slide
 
         // Set video
         const videocontainer = document.getElementById("video-container");

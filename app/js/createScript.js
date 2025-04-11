@@ -75,7 +75,7 @@ function logout() {
     window.location.href = 'login.html';
 }
 
-// Login and retrieve auth token
+// handles create animal http request
 async function createAnimal(name, sciname, descriptions, images, video, events) {
     const SERVER_DOMAIN = 'http://localhost:3000';
 
